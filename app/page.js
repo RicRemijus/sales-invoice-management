@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import UpdateInvoiceForm from "./invoice/page";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [invoices, setInvoices] = useState([]);
@@ -59,7 +60,7 @@ export default function Home() {
         setEndDate('');
     };
   return (
-    <div className="">
+    <div className="flex flex-col min-h-screen">
      <Navbar/>
 
      <div className='max-w-5xl mx-auto p-4'>
@@ -159,6 +160,7 @@ export default function Home() {
   
         
     </div>
+    <Footer/>
     </div>
   );
 }
