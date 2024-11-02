@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
+import UpdateInvoiceForm from "./invoice/page";
 
 export default function Home() {
   const [invoices, setInvoices] = useState([]);
@@ -150,6 +151,10 @@ export default function Home() {
              </div>
         </div>
         </>
+          
+        {editInvoice && (
+            <UpdateInvoiceForm  invoice={editInvoice} onUpdate={handleUpdate} onCancel={()=> setEditInvoice(null)} />
+        )}
         
   
         
